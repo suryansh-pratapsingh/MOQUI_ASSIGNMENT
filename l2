@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- General Guideline Verbs: GET=find, POST=create, PUT=store (create or update), PATCH=update, DELETE=delete  -->
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+          name="tutorial.Tutorial" displayName="Tutorial-REST-API-by-Suryansh" version="2.0.0">
+
+    <resource name="tutorial.Tutorial" require-authentication="anonymous-all">
+        <method type="get"><entity name="tutorial.Tutorial" operation="list"/></method>
+    </resource>
+        <id name="tutorialId" require-authentication="anonymous-all">
+            <method type="delete"><entity name="tutorial.Tutorial" operation="delete"/></method>
+            <method type="get"><entity name="tutorial.Tutorial" operation="one"/></method>
+            <method type="patch"><entity name="tutorial.Tutorial" operation="update"/></method>
+            <method type="post"><entity name="tutorial.Tutorial" operation="create"/></method>
+            <method type="put"><entity name="tutorial.Tutorial" operation="store"/></method>
+        </id>
+
+</resource>
+
